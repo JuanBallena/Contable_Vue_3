@@ -1,0 +1,28 @@
+@use "../settings/variables";
+
+.a-text {
+    text-transform: uppercase;
+    color: variables.$secondary-color;
+    font-weight: bold;
+    &__error {
+        font-size: 12px;
+        color: variables.$danger-color;
+        font-weight: bold;
+    }
+    &--center {
+        text-align: center;
+    }
+    &--xs {
+        padding-top: 0.5em;
+        font-size: 14px;
+    }
+    &--sm {
+        font-size: 18px;
+        margin-bottom: 0.5em;
+        color: variables.$text-color;
+        font-weight: normal;
+    }
+    &--md {
+        font-size: 22px;
+    }
+}

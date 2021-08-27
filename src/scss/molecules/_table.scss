@@ -1,0 +1,38 @@
+@use "../settings/variables";
+.m-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 6px;
+    thead tr th {
+        color: variables.$text-color;
+        text-align: left;
+        padding: 0.4em 1.2em;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    tbody tr td {
+        color: variables.$text-color;
+        text-align: left;
+        padding: 0.4em 1.2em;
+        font-size: 14px;
+    }
+    i {
+        color: variables.$text-color;
+        &:hover {
+            color: variables.$primary-color;
+        }
+    }
+    &--hover {
+        tbody tr:hover {
+            background: rgba(variables.$primary-color, .2);
+        }
+        tbody tr:hover:last-child td:first-child {
+            border-bottom-left-radius: 6px;
+        }
+        
+        tbody tr:hover:last-child td:last-child {
+            border-bottom-right-radius: 6px;
+        }
+    }
+}

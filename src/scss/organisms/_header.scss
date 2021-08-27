@@ -1,0 +1,90 @@
+@use "../settings/variables";
+
+.g-header {
+    z-index: 10;
+    // height: 50vh;
+    position: sticky;
+    top: 0;
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        height: 10vh;
+        padding: 0 100px;
+        background: indigo;
+    }
+    &__section {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.5em;
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+    &__item {
+        width: 100%;
+        padding: 0 1.5em;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        &:hover {
+            transition: all .4s;
+            color: variables.$secondary-color;
+        }
+        &--active {
+            // color: variables.$secondary-color;
+            // transition: all .4s;
+            cursor: pointer;
+        }
+    }
+}
+
+#checkbox-menu:checked + .g-header__nav {
+    left: 0;
+}
+
+@media (max-width: variables.$max-width-sm) {
+    
+    .g-header {
+        position: relative;
+        &__nav {
+            display: block;
+            height: 100vh;
+            padding: 1em 0;
+            left: -100%;
+            position: fixed;
+            transition: all 0.5s;
+            width: 100%;
+        }
+        &__section {
+            padding: 0;
+            font-size: 20px;
+        }
+        &__list {
+            display: block;
+            
+        }
+        &__item {
+            width: auto;
+            padding: 0.5em 1.5em;
+            a {
+                font-size: 20px;
+            }
+        }
+        &__close-menu {
+            position: absolute;
+            right: 2rem;
+            bottom: 1.5rem;
+            cursor: pointer;
+            i {
+                font-size: 26px;
+            }
+        }
+    }
+}

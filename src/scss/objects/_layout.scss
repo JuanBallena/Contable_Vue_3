@@ -1,0 +1,16 @@
+@use "../settings/variables";
+
+.o-layout {
+    display: flex;
+    &__menu {
+        background: white;
+        width: 18%;
+        padding: 1rem 2rem;
+    }
+    &__content {
+        background: variables.$accent-color;
+        min-height: 100vh;
+        width: 82%;
+        padding: 1rem 2rem;
+    }
+}

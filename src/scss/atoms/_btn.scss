@@ -1,0 +1,59 @@
+@use "../settings/variables";
+
+.a-btn {
+   padding: 0.5em 1em;
+   border-radius: 4px;
+   text-decoration: none;
+   margin: 1rem 0 0.5rem 0;
+   font-size: 14px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   &--primary {
+      background: variables.$primary-color;
+      color: white;
+      &:hover {
+         background: rgba(variables.$primary-color, .9);
+         color: white;
+      }
+   }
+   &--secondary {
+      background: variables.$secondary-color;
+      color: white;
+      &:hover {
+         background: rgba(variables.$secondary-color, .9);
+         color: white;
+      }
+   }
+   &--complementary-1 {
+      background: variables.$complementary-color;
+      color: white;
+      &:hover {
+         background: rgba(variables.$complementary-color, .9);
+         color: white;
+      }
+   }
+   &--muted {
+      background: rgba(variables.$text-color, .2);
+      color: white;
+      cursor: not-allowed;
+   }
+   &--outline-primary {
+      background: white;
+      border: 1px solid variables.$primary-color;
+      color: variables.$primary-color;
+      &:hover {
+         background: variables.$primary-color;
+         color: white;
+      }
+   }
+   &--outline-secondary {
+      background: white;
+      border: 1px solid variables.$secondary-color;
+      color: variables.$secondary-color;
+      &:hover {
+         background: variables.$secondary-color;
+         color: white;
+      }
+   }
+}

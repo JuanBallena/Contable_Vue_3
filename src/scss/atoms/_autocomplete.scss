@@ -1,0 +1,47 @@
+@use "../settings/variables";
+
+.a-autocomplete {
+    z-index: 999;
+    &__box {
+        position: relative;
+    }
+    &--border {
+        border: 1px solid variables.$primary-color;
+    }
+    &__items {
+        background: white;
+        height: auto;
+        max-height: 240px;
+        width: 100%;
+        position: absolute;
+        top: -14px;
+        right: 0;
+        left: 0;
+        z-index: 99;
+        list-style: none;
+        padding: 0;
+        overflow-y: auto;
+    }
+    &__item {
+        cursor: pointer;
+        color: variables.$text-color;
+        padding: 0.2em 0.8em 0 0.8em;
+        &:hover {
+            transition: all 0.2s;
+            background: rgba(variables.$primary-color, .2);
+        }
+    }
+    &__prev-item-text {
+        color: variables.$secondary-color;
+        font-weight: bold;
+        font-size: 16px;
+        height: 1.2em;
+    }
+    &__item-text {
+        color: variables.$secondary-color;
+        font-size: 13px;
+    }
+}
+
+
+

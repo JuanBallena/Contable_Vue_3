@@ -1,0 +1,20 @@
+.o-grid {
+    display: grid;
+    gap: 0 1.5rem;
+    &__2-1 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "area-1 area-1 area-2";
+    }
+    &__2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    &__3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__area-1 {
+        grid-area: area-1;
+    }
+    &__area-2 {
+        grid-area: area-2;
+    }
+}
